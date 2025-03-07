@@ -1,28 +1,15 @@
 "use client"
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { FaNodeJs } from "react-icons/fa6";
 import { IoIosArrowForward } from "react-icons/io";
+import { useMediaQuery } from 'react-responsive';
 
 export const ProjectNav = () => {
-    const [hide, setHide] = useState(false);
     const path = usePathname();
-
-    useEffect(() => {
-        const checkIfMobile = () => {
-            if (window.innerWidth <= 768) { 
-                setHide(true);
-            } else {
-                setHide(false);
-            }
-        };
-
-        checkIfMobile(); // Initial check
-        window.addEventListener("resize", checkIfMobile); // Update on window resize
-
-        return () => window.removeEventListener("resize", checkIfMobile);
-    }, []);
+    const isMobile = useMediaQuery({ maxWidth: 768 });
+    const [hide, setHide] = useState(isMobile);
 
     return (
         <nav className={`${!hide && 'w-md'} h-screen bg-[#13191f] px-5 font-bold text-lg select-none`}>
@@ -35,16 +22,9 @@ export const ProjectNav = () => {
             </div>
             <div className="flex flex-row gap-2">
                 <div className="gap-2 flex flex-col">
-                    <p className="text-gray-400">1</p>
-                    <p className="text-gray-400">2</p>
-                    <p className="text-gray-400">3</p>
-                    <p className="text-gray-400">4</p>
-                    <p className="text-gray-400">5</p>
-                    <p className="text-gray-400">6</p>
-                    <p className="text-gray-400">7</p>
-                    <p className="text-gray-400">8</p>
-                    <p className="text-gray-400">9</p>
-                    <p className="text-gray-400">10</p>
+                    {Array.from({ length: 10 }, (_, i) => (
+                        <p key={i} className="text-gray-400">{i + 1}</p>
+                    ))}
                 </div>
                 { !hide && <div className="gap-2 flex flex-col">
                     <p className=" text-yellow-400">&#123;</p>
@@ -70,5 +50,5 @@ export const ProjectNav = () => {
                 </div>}
             </div>
         </nav>
-    )
+    );
 }
