@@ -8,7 +8,7 @@ export default function Home() {
   const [isOn, setIsOn] = useState(false);
   const toggleSwitch = () => setIsOn(!isOn);
 
-  
+
   return (
     <div className={`${isOn && 'group'} flex flex-row max-sm:flex-col h-screen`}>
       {/* PROJECT */}
@@ -29,9 +29,9 @@ export default function Home() {
       </div>
       {/* STACK */}
       <div className="flex-1 bg-black relative flex items-center justify-center group">
-        <h1 className="relative z-10 text-white text-3xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+        <Link href={'/tech'} className="hover:text-black hover:bg-white p-3 rounded-lg relative z-10 text-white text-3xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-500">
           TECH STACK
-        </h1>
+        </Link>
         <div className="absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
           <Image
             src="/cube.jpg"
@@ -45,9 +45,9 @@ export default function Home() {
       </div>
       {/* ABOUT */}
       <div className="flex-1 bg-black relative flex items-center justify-center group">
-        <h1 className="relative z-10 text-white text-3xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+        <Link href={'/about'} className="hover:text-black hover:bg-white p-3 rounded-lg relative z-10 text-white text-3xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-500">
           README.md
-        </h1>
+        </Link>
         <div className="absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
           <Image
             src="/me.jpg"
@@ -61,9 +61,9 @@ export default function Home() {
       </div>
       {/* CONTACT */}
       <div className="flex-1 bg-black relative flex items-center justify-center group">
-        <h1 className="relative z-10 text-white text-3xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+        <Link href={'/contact'} className="hover:text-black hover:bg-white p-3 rounded-lg relative z-10 text-white text-3xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-500">
           CONTACT ME
-        </h1>
+        </Link>
         <div className="absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
           <Image
             src="/contact.jpg"
@@ -86,7 +86,7 @@ export default function Home() {
           <p>Engineer</p>
         </div>
         <hr />
-        <Switcher isOn={isOn} toggleSwitch={toggleSwitch}/>
+        <Switcher isOn={isOn} toggleSwitch={toggleSwitch} />
       </div>
     </div>
   );
