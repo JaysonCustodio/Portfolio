@@ -1,15 +1,13 @@
 "use client";
-import { useRouter } from "next/navigation";
 import { ProjectNav } from "../components/projectsNav";
-import { ImHome } from "react-icons/im";
 import { useMediaQuery } from "react-responsive";
+import Link from "next/link";
 
 export default function ProjectsLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;
 }>) {
-    const router = useRouter();
     const isMobile = useMediaQuery({ maxWidth: 768 });
 
     return (
@@ -18,10 +16,9 @@ export default function ProjectsLayout({
             <div className="w-full flex flex-col">
                 <header className="bg-[#13191f]/70 backdrop-blur-md p-5 flex justify-end gap-5 items-center shadow-md sticky top-0 z-40">
                     <div className="border-r-2 border-white px-5">
-                      <ImHome
-                        onClick={() => router.push("/")}
-                        className="text-3xl cursor-pointer text-gray-300 hover:text-white transition transform hover:scale-110 hover:drop-shadow-lg"
-                    />
+                      <Link href="/" className="text-blue-400 flex mx-auto w-fit underline hover:text-blue-300 transition-colors">
+                    ← Back to Home
+                </Link>
                     </div>
                     {!isMobile && (
                         <div className="flex flex-col text-right">
