@@ -27,9 +27,9 @@ export default function Home() {
                 opacity-0 group-hover:opacity-100 transition-all duration-500 
                 backdrop-blur-md bg-white/10 
                 hover:bg-gradient-to-r 
-                hover:from-pink-400 hover:via-yellow-400 hover:to-cyan-400 
+                hover:from-blue-400 hover:to-cyan-400 
                 hover:text-black shadow-md transform hover:scale-110 hover:brightness-110 
-                hover:shadow-xl hover:shadow-pink-300/50`}
+                hover:shadow-xl hover:shadow-blue-300/50`}
           >
             {label}
           </Link>

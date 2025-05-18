@@ -1,0 +1,26 @@
+.neonBorderWrapper {
+  position: relative;
+}
+
+.neonBorderWrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 0.75rem; /* Match your rounded-xl */
+  padding: 4px;
+  background: conic-gradient(from 0deg at 50% 50%, #00FFFF, #FF00FF, #00FFFF);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  filter: blur(4px);
+  animation: rotate 4s linear infinite;
+  z-index: -1;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}

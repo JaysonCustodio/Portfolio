@@ -7,96 +7,112 @@ const techStack = [
     name: 'AWS',
     icon: <SiAmazon size={50} />,
     color: 'text-orange-300',
+    gradient: 'from-orange-400',
     description: 'Utilized various AWS services like S3, Lambda, and CloudWatch to build scalable, serverless architectures and monitor applications.'
   },
   {
     name: 'Python',
     icon: <SiPython size={50} />,
     color: 'text-yellow-500',
+    gradient: 'from-yellow-500',
     description: 'Used in automation scripts, data transformation, and backend services. Familiar with Flask and scripting for DevOps tasks.'
   },
   {
     name: 'React',
     icon: <FaReact size={50} />, 
     color: 'text-blue-400',
+    gradient: 'from-blue-400',
     description: 'Used extensively in frontend development for building modular and interactive UIs. Experienced with hooks, context API, and state management.'
   },
   {
     name: 'Next.js',
     icon: <SiNextdotjs size={50} />, 
     color: 'text-black',
+    gradient: 'from-black',
     description: 'Utilized for building SSR applications, API routes, and static generation. Familiar with middleware and routing in production-ready apps.'
   },
   {
     name: 'Tailwind CSS',
     icon: <SiTailwindcss size={50} />, 
     color: 'text-cyan-400',
+    gradient: 'from-cyan-400',
     description: 'Primary styling framework in my projects. Enables rapid, responsive UI development with utility-first classes.'
   },
   {
     name: 'Angular',
     icon: <FaAngular size={50} />, 
     color: 'text-red-500',
+    gradient: 'from-red-500',
     description: 'Built scalable enterprise dashboards with Angular, applying services, dependency injection, and reactive forms.'
   },
   {
     name: 'TypeScript',
     icon: <SiTypescript size={50} />, 
     color: 'text-blue-600',
+    gradient: 'from-blue-600',
     description: 'Used across all frontend and backend projects for static type safety and better developer tooling.'
   },
   {
     name: 'JavaScript',
     icon: <SiJavascript size={50} />, 
     color: 'text-yellow-400',
+    gradient: 'from-yellow-400',
     description: 'Core language for frontend logic and dynamic client-side behavior across projects.'
   },
   {
     name: 'Node.js',
     icon: <FaNodeJs size={50} />, 
     color: 'text-green-600',
+    gradient: 'from-green-600',
     description: 'Developed RESTful APIs, background jobs, and server-side logic using Express and Node.js.'
   },
   {
     name: 'SQL (PostgreSQL)',
     icon: <SiPostgresql size={50} />, 
     color: 'text-blue-800',
+    gradient: 'from-blue-800',
     description: 'Designed schemas and optimized queries in PostgreSQL for scalable relational data operations.'
   },
   {
     name: 'Redux',
     icon: <SiRedux size={50} />, 
     color: 'text-purple-500',
+    gradient: 'from-purple-500',
     description: 'Applied Redux for managing complex global state and async logic using Redux Thunk.'
   },
   {
     name: 'Vite',
     icon: <SiVite size={50} />, 
     color: 'text-purple-300',
+    gradient: 'from-purple-300',
     description: 'Fast build tool used in some projects for instant HMR and optimized local dev environments.'
   },
   {
     name: 'HTML5',
     icon: <FaHtml5 size={50} />, 
     color: 'text-orange-500',
+    gradient: 'from-orange-500',
     description: 'Solid understanding of semantic HTML and its role in accessibility and SEO.'
   },
   {
     name: 'CSS3',
     icon: <FaCss3Alt size={50} />, 
     color: 'text-blue-500',
+    gradient: 'from-blue-500',
     description: 'Used in projects prior to Tailwind for responsive design and custom animations.'
   },
   {
     name: 'Git',
     icon: <FaGitAlt size={50} />, 
     color: 'text-orange-600',
+    gradient: 'from-orange-600',
     description: 'Proficient in Git workflows including feature branches, rebases, and CI/CD pipelines.'
   },
   {
     name: 'Figma',
     icon: <SiFigma size={50} />, 
     color: 'text-pink-500',
+    gradient: 'from-pink-500',
     description: 'Collaborated with designers using Figma to convert mockups into pixel-perfect UI components.'
   },
 ];
@@ -125,7 +141,7 @@ export default function TechStackShowcase() {
         {techStack.map((tech, index) => (
           <motion.div
             key={tech.name}
-            className="bg-slate-700 p-5 rounded-2xl hover:scale-[1.03] transition-transform duration-300 shadow-lg"
+            className={`bg-gradient-to-tr ${tech.gradient} via-gray-700 to-gray-800 p-5 rounded-2xl hover:scale-[1.03] transition-transform duration-300 shadow-lg`}
             initial={{ opacity: 0, scale: 0.5 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: index * 0.1, duration: 0.4 }}
