@@ -7,7 +7,7 @@ const Switcher = ({isOn, toggleSwitch} : { isOn: boolean, toggleSwitch: () => vo
       <button
         onClick={toggleSwitch}
         className={`relative inline-flex items-center cursor-pointer w-16 h-6 rounded-full transition-all duration-300 
-          ${isOn ? 'bg-blue-500' : 'bg-gray-300'}`}
+          ${isOn ? 'bg-blue-500' : 'bg-gray-500'}`}
       >
         <span
           className={`absolute w-6 h-6 bg-white rounded-full transition-all duration-300 
