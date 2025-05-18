@@ -19,98 +19,98 @@ const techStack = [
   },
   {
     name: 'React',
-    icon: <FaReact size={50} />, 
+    icon: <FaReact size={50} />,
     color: 'text-blue-400',
     gradient: 'from-blue-400',
     description: 'Used extensively in frontend development for building modular and interactive UIs. Experienced with hooks, context API, and state management.'
   },
   {
     name: 'Next.js',
-    icon: <SiNextdotjs size={50} />, 
+    icon: <SiNextdotjs size={50} />,
     color: 'text-black',
     gradient: 'from-black',
     description: 'Utilized for building SSR applications, API routes, and static generation. Familiar with middleware and routing in production-ready apps.'
   },
   {
     name: 'Tailwind CSS',
-    icon: <SiTailwindcss size={50} />, 
+    icon: <SiTailwindcss size={50} />,
     color: 'text-cyan-400',
     gradient: 'from-cyan-400',
     description: 'Primary styling framework in my projects. Enables rapid, responsive UI development with utility-first classes.'
   },
   {
     name: 'Angular',
-    icon: <FaAngular size={50} />, 
+    icon: <FaAngular size={50} />,
     color: 'text-red-500',
     gradient: 'from-red-500',
     description: 'Built scalable enterprise dashboards with Angular, applying services, dependency injection, and reactive forms.'
   },
   {
     name: 'TypeScript',
-    icon: <SiTypescript size={50} />, 
+    icon: <SiTypescript size={50} />,
     color: 'text-blue-600',
     gradient: 'from-blue-600',
     description: 'Used across all frontend and backend projects for static type safety and better developer tooling.'
   },
   {
     name: 'JavaScript',
-    icon: <SiJavascript size={50} />, 
+    icon: <SiJavascript size={50} />,
     color: 'text-yellow-400',
     gradient: 'from-yellow-400',
     description: 'Core language for frontend logic and dynamic client-side behavior across projects.'
   },
   {
     name: 'Node.js',
-    icon: <FaNodeJs size={50} />, 
+    icon: <FaNodeJs size={50} />,
     color: 'text-green-600',
     gradient: 'from-green-600',
     description: 'Developed RESTful APIs, background jobs, and server-side logic using Express and Node.js.'
   },
   {
     name: 'SQL (PostgreSQL)',
-    icon: <SiPostgresql size={50} />, 
+    icon: <SiPostgresql size={50} />,
     color: 'text-blue-800',
     gradient: 'from-blue-800',
     description: 'Designed schemas and optimized queries in PostgreSQL for scalable relational data operations.'
   },
   {
     name: 'Redux',
-    icon: <SiRedux size={50} />, 
+    icon: <SiRedux size={50} />,
     color: 'text-purple-500',
     gradient: 'from-purple-500',
     description: 'Applied Redux for managing complex global state and async logic using Redux Thunk.'
   },
   {
     name: 'Vite',
-    icon: <SiVite size={50} />, 
+    icon: <SiVite size={50} />,
     color: 'text-purple-300',
     gradient: 'from-purple-300',
     description: 'Fast build tool used in some projects for instant HMR and optimized local dev environments.'
   },
   {
     name: 'HTML5',
-    icon: <FaHtml5 size={50} />, 
+    icon: <FaHtml5 size={50} />,
     color: 'text-orange-500',
     gradient: 'from-orange-500',
     description: 'Solid understanding of semantic HTML and its role in accessibility and SEO.'
   },
   {
     name: 'CSS3',
-    icon: <FaCss3Alt size={50} />, 
+    icon: <FaCss3Alt size={50} />,
     color: 'text-blue-500',
     gradient: 'from-blue-500',
     description: 'Used in projects prior to Tailwind for responsive design and custom animations.'
   },
   {
     name: 'Git',
-    icon: <FaGitAlt size={50} />, 
+    icon: <FaGitAlt size={50} />,
     color: 'text-orange-600',
     gradient: 'from-orange-600',
     description: 'Proficient in Git workflows including feature branches, rebases, and CI/CD pipelines.'
   },
   {
     name: 'Figma',
-    icon: <SiFigma size={50} />, 
+    icon: <SiFigma size={50} />,
     color: 'text-pink-500',
     gradient: 'from-pink-500',
     description: 'Collaborated with designers using Figma to convert mockups into pixel-perfect UI components.'
@@ -132,8 +132,11 @@ export default function TechStackShowcase() {
       </motion.h1>
 
       <div className="text-center mb-8">
-        <Link href="/" className="text-blue-400 underline hover:text-blue-300 transition-colors">
-          ← Back to Home
+        <Link
+          href="/"
+          className="flex mx-auto w-fit px-4 py-2 bg-white/10 backdrop-blur-md rounded-xl text-blue-400 hover:text-blue-300 hover:bg-white/20 transition-all shadow-md hover:shadow-lg"
+        >
+          Back to Home
         </Link>
       </div>
 

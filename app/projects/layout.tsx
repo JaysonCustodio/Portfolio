@@ -16,9 +16,13 @@ export default function ProjectsLayout({
             <div className="w-full flex flex-col">
                 <header className="bg-[#13191f]/70 backdrop-blur-md p-5 flex justify-end gap-5 items-center shadow-md sticky top-0 z-40">
                     <div className="border-r-2 border-white px-5">
-                      <Link href="/" className="text-blue-400 flex mx-auto w-fit underline hover:text-blue-300 transition-colors">
-                    ← Back to Home
-                </Link>
+                        <Link
+                            href="/"
+                            className="flex mx-auto w-fit px-4 py-2 bg-white/10 backdrop-blur-md rounded-xl text-blue-400 hover:text-blue-300 hover:bg-white/20 transition-all shadow-md hover:shadow-lg"
+                        >
+                            Back to Home
+                        </Link>
+
                     </div>
                     {!isMobile && (
                         <div className="flex flex-col text-right">

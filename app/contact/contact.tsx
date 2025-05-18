@@ -58,8 +58,11 @@ export default function ContactPage() {
                 <p className="text-center text-gray-400 mb-8">
                     Drop your thoughts below. I’ll get back to you shortly!
                 </p>
-                <Link href="/" className="text-blue-400 flex mx-auto w-fit underline hover:text-blue-300 transition-colors">
-                    ← Back to Home
+                <Link
+                    href="/"
+                    className="flex mx-auto w-fit px-4 py-2 bg-white/10 backdrop-blur-md rounded-xl text-blue-400 hover:text-blue-300 hover:bg-white/20 transition-all shadow-md hover:shadow-lg"
+                >
+                    Back to Home
                 </Link>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
