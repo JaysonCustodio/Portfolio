@@ -31,7 +31,7 @@ const experienceData = [
 
 export default function AboutMePage() {
   return (
-    <main className="min-h-screen h-[100dvh] overflow-y-auto bg-gradient-to-br from-gray-900 to-gray-800 text-white py-20 px-6">
+    <main className="min-h-screen h-[100dvh] overflow-y-auto bg-gradient-to-br from-black to-gray-800 text-white py-20 px-6">
       <section className="max-w-4xl mx-auto text-center overflow-y-auto mb-10">
         <motion.h1
           initial={{ opacity: 0, y: -50 }}
@@ -60,25 +60,32 @@ export default function AboutMePage() {
       </section>
 
       <section className="max-w-3xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-10">💼 Experience</h2>
+        <h2 className="text-3xl font-bold text-center mb-4">💼 Experience</h2>
+        <div className="w-52 h-1 bg-gradient-to-r from-blue-400 to-cyan-500 mx-auto mb-10 rounded-full"></div>
+
         <div className="space-y-10">
           {experienceData.map((exp, idx) => (
             <motion.div
               key={exp.company}
-              initial={{ opacity: 0, x: idx % 2 === 0 ? -50 : 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: idx * 0.1 }}
-              className="bg-gray-800 border border-gray-700 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+              transition={{ duration: 0.6, delay: idx * 0.15 }}
+              className="relative p-6 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 shadow-lg hover:shadow-2xl transition-all group overflow-hidden"
             >
-              <h3 className="text-xl font-semibold text-white">
-                {exp.company} <span className="text-gray-400">{exp.period}</span>
+              {/* Decorative Animated Border */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-cyan-500/20 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+
+              <h3 className="text-2xl font-semibold text-white z-10 relative">
+                {exp.company}
+                <span className="block text-sm text-gray-400 mt-1">{exp.period}</span>
               </h3>
-              <p className="text-gray-300 mt-2">{exp.description}</p>
+              <p className="text-gray-300 mt-4 z-10 relative">{exp.description}</p>
             </motion.div>
           ))}
         </div>
       </section>
+
     </main>
   );
 }

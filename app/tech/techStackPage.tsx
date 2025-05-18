@@ -121,7 +121,7 @@ import Link from 'next/link';
 
 export default function TechStackShowcase() {
   return (
-    <div className="min-h-screen max-h-screen overflow-y-auto bg-gradient-to-b from-slate-900 to-slate-800 p-10 text-white">
+    <div className="min-h-screen max-h-screen overflow-y-auto bg-gradient-to-br from-black to-gray-800 p-10 text-white">
       <motion.h1
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}

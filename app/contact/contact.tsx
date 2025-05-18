@@ -4,6 +4,10 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import emailjs from 'emailjs-com'
 import Link from 'next/link'
+import { FaPhoneAlt } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { BiSolidMessageRounded } from "react-icons/bi";
+
 
 export default function ContactPage() {
     const [form, setForm] = useState({ name: '', email: '', message: '' })
@@ -40,7 +44,7 @@ export default function ContactPage() {
     }
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-[#0f0f1a] via-[#1b1b2f] to-[#0d0d18] text-white flex items-center justify-center px-4 py-10">
+        <div className="min-h-screen bg-gradient-to-br from-black to-gray-800 text-white flex items-center justify-center px-4 py-10">
             <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -48,12 +52,12 @@ export default function ContactPage() {
                 className="w-full max-w-2xl bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl shadow-2xl p-8"
             >
                 <motion.h1
-                    className="text-4xl font-bold text-center text-white mb-2"
+                    className="text-4xl font-bold text-center text-white mb-2 gap-5 flex items-center justify-center"
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2 }}
                 >
-                    Get In Touch 💬
+                    <span>Get In Touch</span> <BiSolidMessageRounded className='text-5xl'/>
                 </motion.h1>
                 <p className="text-center text-gray-400 mb-8">
                     Drop your thoughts below. I’ll get back to you shortly!
@@ -75,7 +79,7 @@ export default function ContactPage() {
                             value={form.name}
                             onChange={handleChange}
                             placeholder="John Doe"
-                            className="w-full px-4 py-2 rounded-lg bg-[#1f1f2e] border border-gray-600 focus:ring-2 focus:ring-purple-600 focus:outline-none text-white placeholder-gray-400"
+                            className="w-full px-4 py-2 rounded-lg border border-gray-600 focus:ring-2 focus:ring-cyan-600 focus:outline-none text-white placeholder-gray-400"
                         />
                     </div>
 
@@ -88,7 +92,7 @@ export default function ContactPage() {
                             value={form.email}
                             onChange={handleChange}
                             placeholder="you@email.com"
-                            className="w-full px-4 py-2 rounded-lg bg-[#1f1f2e] border border-gray-600 focus:ring-2 focus:ring-blue-600 focus:outline-none text-white placeholder-gray-400"
+                            className="w-full px-4 py-2 rounded-lg border border-gray-600 focus:ring-2 focus:ring-cyan-600 focus:outline-none text-white placeholder-gray-400"
                         />
                     </div>
 
@@ -101,22 +105,28 @@ export default function ContactPage() {
                             value={form.message}
                             onChange={handleChange}
                             placeholder="Type your message here..."
-                            className="w-full px-4 py-2 rounded-lg bg-[#1f1f2e] border border-gray-600 focus:ring-2 focus:ring-pink-600 focus:outline-none text-white placeholder-gray-400"
+                            className="w-full px-4 py-2 rounded-lg border border-gray-600 focus:ring-2 focus:ring-cyan-600 focus:outline-none text-white placeholder-gray-400"
                         ></textarea>
                     </div>
 
                     <button
                         type="submit"
                         disabled={isLoading}
-                        className="w-full py-3 bg-gradient-to-r from-purple-700 via-indigo-700 to-blue-700 rounded-xl hover:shadow-[0_0_10px_rgba(147,51,234,0.8)] transition-all duration-300 font-semibold tracking-wide disabled:opacity-50"
+                        className="w-full py-3 bg-gradient-to-r from-cyan-700 via-cyan-700 to-blue-700 rounded-xl hover:shadow-[0_0_7px_rgba(34,211,238,0.8)] transition-all duration-300 font-semibold tracking-wide disabled:opacity-50"
                     >
-                        {isLoading ? 'Sending...' : '✉️ Send Message'}
+                        {isLoading ? 'Sending...' : 'Send Message'}
                     </button>
                 </form>
 
                 <div className="mt-10 text-center text-gray-300">
-                    <p className="mb-1">📞 <span className="font-semibold">09225994182</span></p>
-                    <p>📧 <span className="font-semibold">custodiojay123@gmail.com</span></p>
+                    <p className="mb-1 flex items-center justify-center gap-2">
+                        <FaPhoneAlt className='text-xl text-cyan-500' />
+                        <span className="font-semibold">09225994182</span>
+                    </p>
+                    <p className="mb-1 flex items-center justify-center gap-2">
+                        <MdEmail className='text-2xl text-cyan-500' />
+                        <span className="font-semibold">custodiojay123@gmail.com</span>
+                    </p>
                 </div>
             </motion.div>
         </div>
