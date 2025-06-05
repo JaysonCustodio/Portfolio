@@ -56,9 +56,8 @@ export const ProjectNav = () => {
                                 <span className="text-white"> : </span> &#123;
                             </p>
                             <div className="flex flex-col border-l-2 border-gray-700 ml-1 px-2 gap-2">
-                                <ProjectLink href="/projects/adeus" path={path} label="adeus-life" year="2024-2025" />
+                                <ProjectLink href="/projects/adeus" path={path} label="adeus-life" year="2020-2025" />
                                 <ProjectLink href="/projects/jetlogistics" path={path} label="jetlogistics" year="2022-2024" />
-                                <ProjectLink href="/projects/ibc" path={path} label="ibc-auto" year="2020-2021" />
                             </div>
                             <p className="text-yellow-400">&#125;</p>
                         </div>
