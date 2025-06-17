@@ -9,7 +9,7 @@ export default function Home() {
   const toggleSwitch = () => setIsOn(!isOn);
 
   return (
-    <div className={`${isOn ? "group" : ""} flex flex-row max-sm:flex-col h-screen`}>
+    <div className={`${isOn ? "group" : ""} flex flex-row max-sm:flex-col h-dvh`}>
       {/* Sections */}
       {[
         { label: "PROJECTS", href: "/projects/adeus", image: "/project.jpg", gradient: "from-cyan-400 to-blue-500" },
