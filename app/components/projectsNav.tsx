@@ -31,7 +31,7 @@ export const ProjectNav = () => {
                 <FaNodeJs className="text-green-400 text-3xl" />
                 {!hide && (
                     <>
-                        <p className="text-gray-300 font-semibold text-xl">project.jayson</p>
+                        <p className="text-gray-300 font-semibold text-xl">projects.jayson</p>
                         <IoIosArrowForward
                             className={`text-3xl text-gray-400 transform transition-transform duration-300 ${hide ? "" : "rotate-90"}`}
                         />

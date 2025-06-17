@@ -1,6 +1,6 @@
 export default function AdeusPage() {
     return (
-        <div className="h-screen w-full">
+        <div className="h-lvh w-full">
             <iframe
                 src="https://adeuslife.com/"
                 title="Embedded Website"

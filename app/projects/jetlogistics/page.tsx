@@ -1,6 +1,6 @@
 export default function JetPage() {
     return (
-        <div className="h-screen w-full">
+        <div className="h-lvh w-full">
             <iframe
                 src="https://www.jetlogistics.co.jp/"
                 title="Embedded Website"
