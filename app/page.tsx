@@ -12,18 +12,18 @@ export default function Home() {
     <div className={`${isOn ? "group" : ""} flex flex-row max-sm:flex-col h-screen`}>
       {/* Sections */}
       {[
-        { label: "PROJECT.jayson", href: "/projects/adeus", image: "/project.jpg", gradient: "from-cyan-400 to-blue-500" },
+        { label: "PROJECTS", href: "/projects/adeus", image: "/project.jpg", gradient: "from-cyan-400 to-blue-500" },
         { label: "TECH STACK", href: "/tech", image: "/cube.jpg", gradient: "from-pink-400 to-yellow-500" },
-        { label: "README.md", href: "/about", image: "/me.jpg", gradient: "from-green-400 to-blue-500" },
+        { label: "ABOUT ME", href: "/about", image: "/me.jpg", gradient: "from-green-400 to-blue-500" },
         { label: "CONTACT ME", href: "/contact", image: "/contact.jpg", gradient: "from-purple-400 to-pink-500" },
       ].map(({ label, href, image }) => (
         <div
           key={label}
-          className="flex-1 bg-black relative flex items-center justify-center group overflow-hidden"
+          className="flex-1 relative flex items-center justify-center group overflow-hidden"
         >
           <Link
             href={href}
-            className={`hover:z-50 cursor-pointer p-3 rounded-lg relative z-10 text-white text-3xl font-bold 
+            className={`cursor-pointer p-3 rounded-lg relative z-10 text-white text-3xl font-bold 
                 opacity-0 group-hover:opacity-100 transition-all duration-500 
                 backdrop-blur-md bg-white/10 
                 hover:bg-gradient-to-r 
@@ -34,7 +34,7 @@ export default function Home() {
             {label}
           </Link>
 
-          <div className="absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <div className={`${isOn ? "opacity-60" : "opacity-0"} hover:opacity-100 absolute inset-0 z-0 transition-opacity duration-500`}>
             <Image
               src={image}
               alt="Background"
@@ -42,7 +42,7 @@ export default function Home() {
               objectFit="cover"
               objectPosition="center"
               // REMOVE blur on hover, only scale the background slightly
-              className="transition-transform duration-700 transform group-hover:scale-110"
+              className="transition-transform duration-700 transform hover:scale-110"
               priority
             />
           </div>
@@ -51,17 +51,14 @@ export default function Home() {
 
       {/* Floating Card */}
       <div
-        className="absolute z-40 max-sm:w-[280px] m-10 max-sm:m-0 text-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
-                           group-hover:top-20 group-hover:left-30 group-hover:transform-none 
-                           transition-all duration-500 bg-white/10 backdrop-blur-lg p-6 rounded-xl shadow-lg"
+        className={`${isOn ? "max-sm:p-2" : "max-sm:w-xs"} absolute z-40 text-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+                           ${isOn && 'top-24 max-sm:top-10 left-36 max-sm:left-30 transform-none'} transition-all duration-500 bg-white/10 backdrop-blur-lg p-5 rounded-xl shadow-lg`}
       >
-        <h1 className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 mb-2">
+        <h1 className={`${isOn && "max-sm:hidden"} text-lg font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500`}>
           Jayson Rosales Custodio
         </h1>
-        <div className="flex max-sm:m-2 flex-row gap-3 max-sm:gap-1 mb-4 text-gray-300 text-sm">
-          <p>Web Developer</p>
-        </div>
-        <hr className="border-gray-600 mb-4" />
+        <p className={`text-sm mb-5 ${isOn && "max-sm:hidden"}`}>Web Developer</p>
+        <hr className={`${isOn && "max-sm:hidden"} border-gray-600 mb-4`} />
         <Switcher isOn={isOn} toggleSwitch={toggleSwitch} />
       </div>
     </div>

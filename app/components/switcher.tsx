@@ -2,7 +2,7 @@ import React  from 'react';
 
 const Switcher = ({isOn, toggleSwitch} : { isOn: boolean, toggleSwitch: () => void}) => {
   return (
-    <div className="flex max-sm:ml-2 items-center space-x-2 mt-4 justify-between max-sm:flex-col max-sm:items-start gap-3">
+    <div className={`${isOn && "max-sm:mt-0 p-0"} flex max-sm:ml-2 items-center space-x-2 mt-4 justify-between gap-3`}>
       <span className="text-sm">View All About Me</span>
       <button
         onClick={toggleSwitch}
