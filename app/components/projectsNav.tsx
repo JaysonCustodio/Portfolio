@@ -49,7 +49,7 @@ export const ProjectNav = () => {
                         <p className="text-yellow-400">&#123;</p>
                         <div className="flex flex-col border-l-2 border-gray-700 ml-1 px-2 gap-2">
                             <ProjectMeta label="name" value="jayson-projects" />
-                            <ProjectMeta label="year" value="2020-2025" />
+                            <ProjectMeta label="year" value="2023-2025" />
                             <ProjectMeta label="private" value="false" />
                             <p className="text-yellow-400">
                                 <span className="text-[#68a9eb]">&quot;projects&quot;</span>
@@ -57,7 +57,7 @@ export const ProjectNav = () => {
                             </p>
                             <div className="flex flex-col border-l-2 border-gray-700 ml-1 px-2 gap-2">
                                 <ProjectLink href="/projects/adeus" path={path} label="adeus-life" year="2020-2025" />
-                                <ProjectLink href="/projects/jetlogistics" path={path} label="jetlogistics" year="2022-2024" />
+                                <ProjectLink href="/projects/jetlogistics" path={path} label="jetlogistics" year="2020-2023" />
                             </div>
                             <p className="text-yellow-400">&#125;</p>
                         </div>
