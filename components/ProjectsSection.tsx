@@ -12,7 +12,7 @@ export default function ProjectsSection() {
       category: 'Frontend',
       description: 'A digital legacy platform that enables users to create digital wills, store precious memories, manage accounts, and preserve photos for future generations. Features secure document storage and user-friendly interface for end-of-life planning.',
       image: 'https://static.readdy.ai/image/4ddd4ebf0302badd347866c16496ddd6/0de9269db49f402beffa7ca94cb62d45.png',
-      technologies: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
+      technologies: ['HTML', 'Tailwind', 'Responsive Design', 'React', 'Next JS'],
       github: 'https://github.com/adeuslife/adeus-frontend-development',
       demo: 'https://www.adeuslife.com/',
       private: true,
