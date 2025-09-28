@@ -18,7 +18,7 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md border-b border-gray-100 z-50">
       <nav className="px-6 py-4">
         <div className="flex items-center justify-between max-w-6xl mx-auto">
-          <div className="font-['Pacifico'] text-2xl text-blue-600">Welcome to my Portfolio</div>
+          <div className="font-['Pacifico'] text-2xl text-blue-600">Welcome</div>
           
           <div className="hidden md:flex items-center space-x-8">
             <button onClick={() => scrollToSection('about')} className="text-gray-700 hover:text-blue-600 transition-colors cursor-pointer whitespace-nowrap">About</button>
