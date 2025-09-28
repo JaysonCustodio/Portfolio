@@ -141,7 +141,7 @@ export default function ProjectsSection() {
                 </div>
 
                 { project.private && <div className="flex gap-4">
-                  <a
+                  {/* <a
                     href={project.github}
                     className="flex items-center text-gray-600 hover:text-blue-600 transition-colors cursor-pointer whitespace-nowrap"
                   >
@@ -149,7 +149,7 @@ export default function ProjectsSection() {
                       <i className="ri-github-line"></i>
                     </div>
                     Code
-                  </a>
+                  </a> */}
                   <a
                     href={project.demo}
                     className="flex items-center text-gray-600 hover:text-blue-600 transition-colors cursor-pointer whitespace-nowrap"
