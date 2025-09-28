@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Pacifico } from "next/font/google";
+import { GoogleAnalytics } from "nextjs-google-analytics";
+
 import "./globals.css";
 
 const pacifico = Pacifico({
@@ -31,6 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
+      <GoogleAnalytics trackPageViews gaMeasurementId="G-1D3KCFY5S7" />
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${pacifico.variable} antialiased`}
       >
