@@ -14,7 +14,7 @@ export default function ProjectsSection() {
       image: 'https://static.readdy.ai/image/4ddd4ebf0302badd347866c16496ddd6/0de9269db49f402beffa7ca94cb62d45.png',
       technologies: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
       github: 'https://github.com/adeuslife/adeus-frontend-development',
-      demo: 'https://www.adeuslife.com/',
+      demo: 'https://www.adeus.app/',
       private: true,
     },
     {
